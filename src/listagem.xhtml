@@ -1,0 +1,9 @@
+<!-- listagem.xhtml -->
+<rich:dataTable value="#{usuarioBean.usuarios}" var="usuario">
+    <rich:column>
+        #{usuario.nome}
+    </rich:column>
+    <rich:column>
+        #{usuario.email}
+    </rich:column>
+</rich:dataTable>

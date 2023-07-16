@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+    <title>Entrada de Dados</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h2>Despesa</h2>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="protocoloDespesa" value="Número de Protocolo:" />
+            <h:inputText id="protocoloDespesa" value="#{entradaDadosBean.numeroProtocoloDespesa}" />
+
+            <h:outputLabel for="tipoDespesa" value="Tipo de Despesa:" />
+            <h:inputText id="tipoDespesa" value="#{entradaDadosBean.tipoDespesa}" />
+
+            <h:outputLabel for="dataProtocolo" value="Data de Protocolo:" />
+            <h:inputText id="dataProtocolo" value="#{entradaDadosBean.dataProtocolo}" />
+
+            <h:outputLabel for="dataVencimento" value="Data de Vencimento:" />
+            <h:inputText id="dataVencimento" value="#{entradaDadosBean.dataVencimento}" />
+
+            <h:outputLabel for="credorDespesa" value="Credor da Despesa:" />
+            <h:inputText id="credorDespesa" value="#{entradaDadosBean.credorDespesa}" />
+
+            <h:outputLabel for="descricaoDespesa" value="Descrição da Despesa:" />
+            <h:inputText id="descricaoDespesa" value="#{entradaDadosBean.descricaoDespesa}" />
+
+            <h:outputLabel for="valorDespesa" value="Valor da Despesa:" />
+            <h:inputText id="valorDespesa" value="#{entradaDadosBean.valorDespesa}" />
+
+            <h:commandButton value="Salvar" action="#{entradaDadosBean.salvarDespesa}" />
+        </h:panelGrid>
+
+        <h2>Empenho</h2>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="anoEmpenho" value="Ano do Empenho:" />
+            <h:inputText id="anoEmpenho" value="#{entradaDadosBean.anoEmpenho}" />
+
+            <h:outputLabel for="numeroEmpenho" value="Número do Empenho:" />
+            <h:inputText id="numeroEmpenho" value="#{entradaDadosBean.numeroEmpenho}" />
+
+            <h:outputLabel for="dataEmpenho" value="Data do Empenho:" />
+            <h:inputText id="dataEmpenho" value="#{entradaDadosBean.dataEmpenho}" />
+
+            <h:outputLabel for="valorEmpenho" value="Valor do Empenho:" />
+            <h:inputText id="valorEmpenho" value="#{entradaDadosBean.valorEmpenho}" />
+
+            <h:outputLabel for="observacaoEmpenho" value="Observação:" />
+            <h:inputText id="observacaoEmpenho" value="#{entradaDadosBean.observacaoEmpenho}" />
+
+            <h:commandButton value="Salvar" action="#{entradaDadosBean.salvarEmpenho}" />
+        </h:panelGrid>
+
+        <h2>Pagamento</h2>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="anoPagamento" value="Ano do Pagamento:" />
+            <h:inputText id="anoPagamento" value="#{entradaDadosBean.anoPagamento}" />
+
+            <h:outputLabel for="numeroPagamento" value="Número do Pagamento:" />
+            <h:inputText id="numeroPagamento" value="#{entradaDadosBean.numeroPagamento}" />
+
+            <h:outputLabel for="dataPagamento" value="Data do Pagamento:" />
+            <h:inputText id="dataPagamento" value="#{entradaDadosBean.dataPagamento}" />
+
+            <h:outputLabel for="valorPagamento" value="Valor do Pagamento:" />
+            <h:inputText id="valorPagamento" value="#{entradaDadosBean.valorPagamento}" />
+
+            <h:outputLabel for="observacaoPagamento" value="Observação:" />
+            <h:inputText id="observacaoPagamento" value="#{entradaDadosBean.observacaoPagamento}" />
+
+            <h:commandButton value="Salvar" action="#{entradaDadosBean.salvarPagamento}" />
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>

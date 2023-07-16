@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+    <title>Consulta de Despesas</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <h2>Filtros de Consulta</h2>
+        <table>
+            <tr>
+                <td>Data de Protocolo:</td>
+                <td>
+                    <h:inputText value="#{consultaDespesasBean.dataProtocolo}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Tipo de Despesa:</td>
+                <td>
+                    <h:inputText value="#{consultaDespesasBean.tipoDespesa}" />
+                </td>
+            </tr>
+            <tr>
+                <td>Credor:</td>
+                <td>
+                    <h:inputText value="#{consultaDespesasBean.credor}" />
+                </td>
+            </tr>
+        </table>
+
+        <br />
+
+        <h:commandButton value="Consultar" action="#{consultaDespesasBean.consultarDespesas}" />
+
+        <br />
+
+        <h2>Resultados da Consulta</h2>
+        <rich:dataTable value="#{consultaDespesasBean.despesas}" var="despesa">
+            <rich:column>
+                <f:facet name="header">Número de Protocolo</f:facet>
+                #{despesa.numeroProtocolo}
+            </rich:column>
+            <rich:column>
+                <f:facet name="header">Tipo de Despesa</f:facet>
+                #{despesa.tipoDespesa}
+            </rich:column>
+            <rich:column>
+                <f:facet name="header">Data de Protocolo</f:facet>
+                #{despesa.dataProtocolo}
+            </rich:column>
+            <rich:column>
+                <f:facet name="header">Data de Vencimento</f:facet>
+                #{despesa.dataVencimento}
+            </rich:column>
+            <rich:column>
+                <f:facet name="header">Credor</f:facet>
+                #{despesa.credor}
+            </rich:column>
+            <rich:column>
+                <f:facet name="header">Descrição</f:facet>
+                #{despesa.descricao}
+            </rich:column>
+            <rich:column>
+                <f:facet name="header">Valor</f:facet>
+                #{despesa.valor}
+            </rich:column>
+        </rich:dataTable>
+    </h:form>
+</h:body>
+
+</html>
